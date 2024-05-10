@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block title %} Data {% endblock %}
+
+{% block content %} 
+  <a href="/">Home</a>
+  <h2>sensordata</h2>
+  <table style="width:90%">
+    <tr>
+      {% for x in ligne1 %}
+      <th>{{x[0]}}</th>
+      {% endfor %}
+    </tr>
+    {% for y in matricedata %}
+      <tr>
+        <td>{{y[0]}}</td>
+        <td>{{y[1]}}</td>
+        <td>{{y[2]}}</td>
+        <td>{{y[3]}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
